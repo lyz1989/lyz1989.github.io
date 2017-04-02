@@ -1,0 +1,467 @@
+/*css 初始化 */
+@charset "UTF-8";
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;  /*清除元素的内外边距*/
+}
+
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;  /*外面环绕线*/
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/*去掉原样式中的小黑点*/
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";  /*字体的自动识别*/
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+/*输入字居中显示*/
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+/**/
+textarea {
+    resize: none;  /*不可以随意拖动*/
+}
+
+/*防止拖动*/
+img {
+    border: 0;
+    vertical-align: middle; /*  去掉图片底部默认的3像素空白缝隙*/
+}
+
+table {
+    border-collapse: collapse; /*合并外连线*/
+}
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53"; /*unitedCode的写法，宋体的写法*/
+    color: #666; /*150%基于当前字体尺寸的百分比行间距*/
+    background: #fff;
+}
+
+.clearfix:before, .clearfix:after {
+    /*清除浮动，最好最标准的写法*/
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/  /*兼容IE6下的写法*/
+}
+
+a {
+    color: #666;   /*a 标签是不继承颜色 的*/
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {  /*一般是起装饰作用*/
+    font-style: normal;  /*去掉原有的样式*/
+    text-decoration: none;  /*去掉下划线或是删除线*/
+}
+
+.col-red {
+    color: #C81623 !important;/*京东主色调*/
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.al {
+    text-align: left;
+}
+
+.ac {
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+}
+
+.hide {
+    display: none;
+}
+
+/*css初始化完成*/
+
+/*shoftcut开始*/
+.shortcut {
+    /*因为是一个通栏的盒子，所以宽度可以省略不用设置*/
+    height: 30px;
+    line-height: 30px;
+    background-color: #f1f1f1;
+    /*background-color: pink;*/
+}
+.shortcut-left,
+.shortcut-right .fore
+{
+    padding: 0 25px 0 10px;
+    position: relative;
+    /*background-color: #fff;*/
+}
+.shortcut-left:hover {
+    background-color: #fff;
+}
+.shortcut-left i,
+.fore i
+{
+    height: 7px;
+    width: 14px;
+    position: absolute;
+    right: 6px;
+    top:12px;
+    /*background-color: red;*/
+    overflow:hidden;
+}
+.shortcut-left i s,
+.fore i s
+{
+    font: 14px/31px  "consolas";
+    position: absolute;
+    top: -16px;
+    left:0;
+}
+.shortcut-right ul li {
+    float: left;
+    /*width: 68px;*/
+    padding: 0 11px 0 10px;
+}
+.shortcut-right .line {
+    width: 1px;
+    height: 12px;
+    background-color: red;
+    padding: 0;
+    margin-top: 9px;
+    /*padding-top: 9px;*/
+}
+/*.shortcut-right .fore {*/
+    /*position: relative;*/
+    /*padding: 0 25px 0 10px;*/
+/*}*/
+.shortcut-right .jd-tel {
+    padding-left: 26px;
+}
+.tel {
+    width: 15px;
+    height: 20px;
+    display:inline-block;
+    /*background-color: red;*/
+    background: url(../images/sprite.png) no-repeat;
+    position: absolute;
+    top: 5px;
+    left: 8px;
+}
+
+.fore:hover {
+    background-color: #fff;
+}
+.jd-tel:hover  .tel{
+    background-position: 0 -25px;
+}
+/*shoftcut结束*/
+
+/*topBanner开始*/
+.topBanner {
+    background-color: #C61913;
+}
+.topBanner-w {
+    position:relative;
+}
+.closeBanner {
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    /*background-color: blue;*/
+    background: url(../images/close.png) no-repeat;
+    cursor: pointer;
+}
+.closeBanner:hover {
+    background-position: 0 -19px;
+}
+/*topBanner结束*/
+
+/*logo部分开始*/
+.logo {
+    width: 361px;
+    height: 60px;
+    /*background-color: pink;*/
+    float: left;
+    padding:20px 0;
+}
+.logo a {
+    width: 270px;
+    height: 60px;
+    display: block;
+    background: url(../images/logo.png) no-repeat;
+    text-indent: -2000em;
+}
+.search {
+    width: 538px;
+    height: 36px;
+    /*background-color: blue;*/
+    float: left;
+    margin-top: 25px;
+}
+.search input {
+    width: 450px;
+    height: 32px;
+    border: 2px solid #B61D1D;
+    float: left;
+    padding-left: 4px;
+    color:#ccc;
+}
+.search button {
+    width: 80px;
+    height: 36px;
+    background-color: #B61D1D;
+    font-size: 22px;
+    color: #fff;
+    float: left;
+    cursor: pointer;
+}
+.car {
+    width: 96px;
+    height: 34px;
+    line-height: 34px;
+    /*background-color: purple;*/
+    border: 1px solid #DFDFDF;
+    float: right;
+    margin: 25px 65px 0 0;
+    padding-left: 43px;
+    position: relative;
+}
+.icon1 {
+    width: 18px;
+    height: 16px;
+    /*background-color: red;*/
+    background: url(../images/sprite.png) no-repeat 0 -90px;
+    /*display: inline-block;*/
+    position: absolute;
+    left: 15px;
+    top:8px;
+}
+.icon2 {
+    font: 400 14px/34px "宋体";
+    position:absolute;
+    top: 1px;
+    right: 12px;
+}
+.icon3 {
+    width: 16px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    color:#fff;
+    position: absolute;
+    right: 20px;
+    top: -4px;
+    background-color: #C81623;
+    border-radius: 7px  7px  7px 0;
+}
+.hotWords {
+    height: 30px;
+    float: left;
+    margin-top: 9px;
+}
+.hotWords a {
+    margin-right: 6px;
+}
+/*logo部分结束*/
+
+/*nav部分开始*/
+.nav {
+    height: 44px;
+    border-bottom: 2px solid #B1191A;
+}
+.nav-dropdown {
+    height: 44px;
+    width: 210px;
+    background-color: #B1191A;
+    float: left;
+    position:relative;
+    z-index: 11;
+}
+.nav-dropdown-all a{
+    /*宽度是继承来的,因此可以省略不写的*/
+    display: block;
+    height: 44px;
+    font: 400 16px/44px "microsoft yahei";
+    color: #fff;
+    padding-left: 10px;
+}
+
+.nav-dropdown-detail {
+    height: 466px;
+    background-color: #C81623;
+    border-left: 1px solid #B1191A;
+    /*margin-top: 2px;*/
+    border-top: 2px solid #B1191A;
+}
+.ndd-items {
+    height: 31px;
+    /*line-height: 31px;*/
+    color: #fff;
+    padding: 0 13px 0 9px;
+}
+.ndd-items a {
+    color: #fff;
+    font: 400 15px/31px "microsoft yahei";
+}
+
+.nav-items {
+    float: left;
+    height: 44px;
+    line-height: 44px;
+}
+
+.ndd-items h3 {
+    float: left;
+}
+.ndd-items span {
+    float: right;
+    font: 400  14px/31px "consolas";
+}
+.nav-items ul li{
+    float: left;
+}
+.nav-items ul li a {
+    display: block;
+    height: 44px;
+    padding: 0 20px;
+    font: 400 16px/44px "microsoft yahei";
+}
+.main-right-bottom {
+    margin-top:5px;
+}
+.ndd-items:hover {
+    background-color: #fff;
+}
+.ndd-items:hover a {
+    color: #B1191A;
+}
+/*nav部分结束*/
+
+
+
+
+
+
+/*footer部分开始*/
+.footer-top-slogan {
+    height: 54px;
+    /*line-height: 94px;*/
+    background-color: #F5F5F5;
+    padding: 20px 0;
+
+}
+.footer-top-slogan span {
+    position:absolute;
+    left: 50%;
+}
+.slogan1 {
+    margin-left: -600px;
+}
+.slogan2 {
+    margin-left: -300px;
+}
+.slogan3 {
+
+}
+.slogan4 {
+    margin-left: 303px;
+}
+.footer-top-product dl {
+    margin-top: 25px;
+    float: left;
+    width: 200px;
+}
+.footer-top-product dl dt,
+.coverage h2
+{
+    font-size: 16px;
+    font-family: "microsoft yahei";
+    height: 25px;
+}
+.footer-top-product dl dd {
+    height: 22px;
+}
+.coverage {
+    width: 189px;
+    height: 168px;
+    background:url(../images/china.png) no-repeat left bottom;
+    float: right;
+    margin-top: 16px;
+    padding-left: 17px;
+}
+.coverage h2 {
+    margin-top: 9px;
+}
+.coverage  p {
+    line-height: 22px;
+}
+.footer-bottom {
+    /*border-top: 1px solid red;*/
+    border-top: 1px solid #EAEAEA;
+    margin-top: 25px;
+    padding-top: 24px;
+    text-align: center;
+}
+.footer-bottom-links {
+    height: 26px;
+}
+.footer-bottom-links a {
+    margin: 0 10px;
+}
+.footer-bottom-copyright p{
+    line-height: 22px;
+}
+.footer-bottom-message {
+    margin-top: 12px;
+}
+.footer-bottom-message a {
+    margin: 0 10px;
+}
+/*footer部分结束*/    

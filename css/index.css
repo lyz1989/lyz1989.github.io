@@ -1,0 +1,173 @@
+@charset "UTF-8";
+/*banner470开始*/
+.banner470 a {
+    width: 100%; /*这个宽度是不能省略的，因为是要给a标签设置的背景图片*/
+    height: 613px;
+    /*display: block;*/
+    background: url(../images/jdbj.jpg) no-repeat center center;
+    position: absolute; /*脱离标准流，而不占据原来的位置*/
+    z-index: 9;
+    /*在不设置left  top的情况下，默认是以原位显示*/
+}
+/*banner470结束*/
+
+/*main部分开始*/
+.main {
+    position: relative; /*要占据标准流的位置,因此要用相对定位*/
+    z-index: 10;
+    padding-top: 12px;
+}
+.main-left {
+    width: 730px;
+    height: 454px;
+    background-color: purple;
+    float: left;
+    margin-left: 220px;
+    position: relative;
+}
+
+.arrow {
+    display: none;
+}
+.main-left:hover .arrow,.today-right:hover .arrow {
+    display:block;
+}
+.arrow-left,.arrow-right {
+    width: 30px;
+    height: 62px;
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    /*background-color: blue;*/
+    color: #fff;
+    font: 400 28px/62px "宋体";
+    text-align: center;
+    background: rgba(0,0,0,.3);
+    cursor: pointer;
+}
+.arrow-left {
+    left: 0;
+}
+.arrow-right {
+    right: 0;
+}
+.main-left-circle ul {
+    position: absolute;
+    left: 50%;
+    margin-left: -66px;
+    bottom: 8px;
+}
+.main-left-circle ul li {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    background-color: #3E3E3E;
+    margin: 0 2px;
+    float: left;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.main-left-circle ul li.current {
+    background-color: red;
+}
+
+
+.main-right {
+    width: 250px;
+    height: 454px;
+    /*background-color: blue;*/
+    float: right;
+}
+.main-right-top {
+    height: 371px;
+    border: 1px solid #E4E4E4;
+    overflow: hidden;
+}
+.mrt-news {
+    height: 162px;
+    border-bottom: 1px dotted #E4E4E4;
+
+}
+.mrtn-top {
+    height: 31px;
+    line-height: 31px;
+    border-bottom: 1px dashed #E4E4E4;
+    padding:0 15px;
+}
+.mrtn-top h3 {
+    float: left;
+    font-size: 14px;
+    font-family: "microsoft yahei";
+}
+.mrtn-top a {
+    float: right;
+}
+.mrtn-bottom {
+    padding: 12px 0  0 15px;
+}
+.mrtn-bottom ul li {
+    height: 22px;
+}
+.mrtn-bottom ul li span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+.mrt-live ul {
+    width: 252px;
+}
+.mrt-live ul li {
+    width: 62px;
+    height: 70px;
+    border: 1px solid #E4E4E4;
+    float: left;
+    border-top: 0;
+    margin-left: -1px;
+}
+.mrt-live ul li.current {
+    background: url(../images/quan.png) no-repeat right top;
+}
+.mrt-live ul li a {
+    width: 62px;
+    height: 26px;
+    display: block;
+    text-align: center;
+    padding-top:44px;
+    position: relative;
+}
+.mrt-live  li i {
+    width: 25px;
+    height: 25px;
+    background: url(../images/live.png) 0 0;
+    position: absolute;
+    left: 18px;
+    top: 15px;
+}
+/*main部分结束*/
+
+/*today部分开始*/
+.today {
+    position: relative;
+    z-index: 10;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.today-left {
+    float: left;
+    width: 210px;
+}
+.today-right {
+    float: left;
+    width: 1000px;
+    position: relative;
+}
+.today-right ul {
+    /*让ul足够的宽，可以放开很多个li标签*/
+    width: 500%;
+}
+.today-right ul li{
+    float: left;
+    margin-right: 1px;
+}
+/*today部分结束*/
